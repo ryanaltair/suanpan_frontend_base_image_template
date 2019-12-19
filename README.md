@@ -41,7 +41,7 @@ rm -r docker/dist  && cp -r dist docker/ && cd docker && bash build.sh
 
 ### 参考dockerfile
 ```
-FROM registry.cn-shanghai.aliyuncs.com/helloworld/base_express_server:0.1.0
+FROM registry.cn-shanghai.aliyuncs.com/shuzhi/base_express_server:0.1.0
 
 WORKDIR /home/app/
 
@@ -52,7 +52,7 @@ EXPOSE 7000
 CMD tail -f /dev/null
 ```
 
-基础镜像为 registry.cn-shanghai.aliyuncs.com/helloworld/base_express_server:0.1.0 
+基础镜像为 registry.cn-shanghai.aliyuncs.com/shuzhi/base_express_server:0.1.0 
 可参考 https://github.com/ryanaltair/suanpan_frontend_base_image
 
 dist 为包含前端发布用的文件夹
