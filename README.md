@@ -32,7 +32,7 @@ rm -r docker/dist  && cp -r dist docker/ && cd docker && bash build.sh
 
 ### Create a new Dockerfile in the new directory
 ```
-FROM registry.cn-shanghai.aliyuncs.com/shuzhi/base_ui_express:0.0.1
+FROM registry.cn-shanghai.aliyuncs.com/shuzhi/base_express_server:0.1.0
 
 WORKDIR /home/app/
 
