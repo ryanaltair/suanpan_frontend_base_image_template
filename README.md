@@ -1,12 +1,11 @@
-# 算盘前端托管项目
-template for suanpan front panel
+# 算盘前端项目模版
 
 ## 使用前提
 本地开发环境需要有 docker
 需要有镜像仓库 
 可参考 阿里云镜像服务 https://help.aliyun.com/product/60716.html
 
-下文中 
+⚠️下文中 
 镜像仓库地址默认为 registry.cn-shanghai.aliyuncs.com/helloworld 
 实际操作请替换为实际的地址
 镜像名为test_image
@@ -60,7 +59,7 @@ dist 为包含前端发布用的文件夹
 ### 构建镜像
 docker build -t registry.cn-shanghai.aliyuncs.com/helloworld/test_image:0.1.0 .
 
-### Run a container and start node server
+### 本地测试web是否正常工作
 `docker run -d --name test_sp_frontend -p 7000:7000 registry.cn-shanghai.aliyuncs.com/helloworld/test_image:0.1.0 node server.js --stream-user-id test --stream-app-id 12345 --stream-node-id 3eb9eb4acdsaf234234234sdf --stream-host abc.abc.com`
 
 ### Test in your local
@@ -69,3 +68,6 @@ http://localhost:7000/index.html
 ### Push to registry
 `docker push registry.cn-shanghai.aliyuncs.com/helloworld/test_image:0.1.0`
 
+# 注意事项
+
+⚠️ 资源访问请不要使用 / 开头的绝对路径 使用 相对路径
